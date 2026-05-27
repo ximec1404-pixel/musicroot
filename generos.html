@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MusicRoot | Subpágina de géneros</title>
+  <meta name="description" content="Subpágina de MusicRoot con información sobre géneros musicales y filtros dinámicos con JavaScript.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Ir a la página principal de MusicRoot">MusicRoot</a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Abrir o cerrar menú principal</span>
+        <span aria-hidden="true">☰</span>
+      </button>
+
+      <nav class="main-nav" aria-label="Menú principal">
+        <ul id="menu-principal" class="nav-list">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="has-submenu">
+            <button class="submenu-btn active" type="button" aria-expanded="false" aria-controls="submenu-generos">Géneros</button>
+            <ul id="submenu-generos" class="submenu" aria-label="Submenú de géneros musicales">
+              <li><a href="#jazz">Jazz</a></li>
+              <li><a href="#pop">Pop</a></li>
+              <li><a href="#blues">Blues</a></li>
+              <li><a href="#hiphop">Hip Hop</a></li>
+              <li><a href="#rock">Rock and Roll</a></li>
+              <li><a href="#rnb">R&amp;B</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#interactivo">Interactivo</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+          <li><a class="active" href="generos.html">Subpágina</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="subpage-hero" aria-labelledby="titulo-generos">
+      <div class="section-wrapper">
+        <p class="eyebrow">Subpágina del sitio</p>
+        <h1 id="titulo-generos">Géneros musicales</h1>
+        <p>En esta subpágina se amplía la información de MusicRoot. Los botones permiten filtrar los géneros y los botones de cada tarjeta abren información dinámica sin recargar la página.</p>
+      </div>
+    </section>
+
+    <section class="filter-section" aria-labelledby="titulo-filtros">
+      <div class="section-wrapper">
+        <div class="section-heading">
+          <h2 id="titulo-filtros">Filtro dinámico de géneros</h2>
+          <p>Seleccione un botón para mostrar todos los géneros o solo una categoría.</p>
+        </div>
+        <div class="filter-controls" aria-label="Filtros de géneros musicales">
+          <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">Todos</button>
+          <button type="button" class="filter-btn" data-filter="jazz">Jazz</button>
+          <button type="button" class="filter-btn" data-filter="pop">Pop</button>
+          <button type="button" class="filter-btn" data-filter="blues">Blues</button>
+          <button type="button" class="filter-btn" data-filter="hiphop">Hip Hop</button>
+          <button type="button" class="filter-btn" data-filter="rock">Rock</button>
+          <button type="button" class="filter-btn" data-filter="rnb">R&amp;B</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="genre-detail-section" aria-label="Detalle de géneros musicales">
+      <div class="section-wrapper genre-detail-grid">
+        <article id="jazz" class="genre-card" data-category="jazz">
+          <img src="imagenes/jazz1.jfif" alt="Presentación musical relacionada con el jazz">
+          <div class="genre-card-body">
+            <p class="year">Origen aproximado: 1900</p>
+            <h2>Jazz</h2>
+            <p>El jazz nació en Nueva Orleans y se reconoce por la improvisación, la mezcla cultural y la libertad interpretativa de sus músicos.</p>
+            <button class="pill-btn fact-btn" type="button" data-fact="El jazz convirtió la improvisación en una parte fundamental de la interpretación musical.">Dato curioso</button>
+            <button class="pill-btn artist-btn" type="button" data-artist="Louis Armstrong es uno de los artistas más reconocidos en la historia del jazz.">Artista</button>
+          </div>
+        </article>
+
+        <article id="pop" class="genre-card" data-category="pop">
+          <img src="imagenes/pop1.jfif" alt="Concierto de música pop con luces de escenario">
+          <div class="genre-card-body">
+            <p class="year">Origen aproximado: 1960</p>
+            <h2>Pop</h2>
+            <p>El pop se caracteriza por canciones de estructura sencilla, melodías fáciles de recordar y gran difusión en medios de comunicación.</p>
+            <button class="pill-btn fact-btn" type="button" data-fact="El pop cambia con facilidad porque incorpora sonidos de distintas épocas y culturas.">Dato curioso</button>
+            <button class="pill-btn artist-btn" type="button" data-artist="Michael Jackson es reconocido mundialmente como uno de los artistas más importantes del pop.">Artista</button>
+          </div>
+        </article>
+
+        <article id="blues" class="genre-card" data-category="blues">
+          <img src="imagenes/bluesartist.jfif" alt="Artista interpretando blues con guitarra">
+          <div class="genre-card-body">
+            <p class="year">Origen aproximado: 1800</p>
+            <h2>Blues</h2>
+            <p>El blues expresa emociones profundas y tuvo gran influencia en el desarrollo de otros géneros como el jazz, el rock y el soul.</p>
+            <button class="pill-btn fact-btn" type="button" data-fact="El blues influyó directamente en el nacimiento del rock and roll.">Dato curioso</button>
+            <button class="pill-btn artist-btn" type="button" data-artist="B. B. King es uno de los guitarristas más representativos del blues.">Artista</button>
+          </div>
+        </article>
+
+        <article id="hiphop" class="genre-card" data-category="hiphop">
+          <img src="imagenes/hiphop1.jfif" alt="Imagen representativa de la cultura hip hop">
+          <div class="genre-card-body">
+            <p class="year">Origen aproximado: 1970</p>
+            <h2>Hip Hop</h2>
+            <p>El hip hop surgió en el Bronx como movimiento cultural urbano relacionado con rap, DJ, breakdance y grafiti.</p>
+            <button class="pill-btn fact-btn" type="button" data-fact="El hip hop no es solo música, también integra baile, arte visual y expresión social.">Dato curioso</button>
+            <button class="pill-btn artist-btn" type="button" data-artist="Tupac Shakur es uno de los referentes más conocidos del rap y la cultura hip hop.">Artista</button>
+          </div>
+        </article>
+
+        <article id="rock" class="genre-card" data-category="rock">
+          <img src="imagenes/Rock1.jfif" alt="Presentación relacionada con rock and roll">
+          <div class="genre-card-body">
+            <p class="year">Origen aproximado: 1950</p>
+            <h2>Rock and Roll</h2>
+            <p>El rock and roll se desarrolló con influencia del blues, el country y el rhythm and blues. Se asocia con guitarras eléctricas y energía escénica.</p>
+            <button class="pill-btn fact-btn" type="button" data-fact="El rock and roll fue clave en los cambios culturales juveniles de los años cincuenta y sesenta.">Dato curioso</button>
+            <button class="pill-btn artist-btn" type="button" data-artist="Elvis Presley es uno de los artistas más asociados con el rock and roll clásico.">Artista</button>
+          </div>
+        </article>
+
+        <article id="rnb" class="genre-card" data-category="rnb">
+          <img src="imagenes/rbpiano.jfif" alt="Piano asociado al rhythm and blues">
+          <div class="genre-card-body">
+            <p class="year">Origen aproximado: 1940</p>
+            <h2>R&amp;B</h2>
+            <p>El rhythm and blues combina elementos de jazz, gospel y blues. En la actualidad se relaciona con voces expresivas y producción moderna.</p>
+            <button class="pill-btn fact-btn" type="button" data-fact="El R&B evolucionó hasta mezclarse con soul, funk, pop y música urbana contemporánea.">Dato curioso</button>
+            <button class="pill-btn artist-btn" type="button" data-artist="Ray Charles y Aretha Franklin son figuras importantes vinculadas al R&B y el soul.">Artista</button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="info-modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <button class="modal-close" type="button" aria-label="Cerrar ventana informativa">×</button>
+      <h2 id="modal-title">Información</h2>
+      <p id="modal-text"></p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>MusicRoot - Subpágina de géneros musicales.</p>
+  </footer>
+</body>
+</html>

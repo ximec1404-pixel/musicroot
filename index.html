@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MusicRoot | Página principal</title>
+  <meta name="description" content="Sitio web educativo sobre géneros musicales con elementos dinámicos desarrollados en JavaScript.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Ir a la página principal de MusicRoot">MusicRoot</a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Abrir o cerrar menú principal</span>
+        <span aria-hidden="true">☰</span>
+      </button>
+
+      <nav class="main-nav" aria-label="Menú principal">
+        <ul id="menu-principal" class="nav-list">
+          <li><a class="active" href="index.html">Inicio</a></li>
+          <li class="has-submenu">
+            <button class="submenu-btn" type="button" aria-expanded="false" aria-controls="submenu-generos">Géneros</button>
+            <ul id="submenu-generos" class="submenu" aria-label="Submenú de géneros musicales">
+              <li><a href="generos.html#jazz">Jazz</a></li>
+              <li><a href="generos.html#pop">Pop</a></li>
+              <li><a href="generos.html#blues">Blues</a></li>
+              <li><a href="generos.html#hiphop">Hip Hop</a></li>
+              <li><a href="generos.html#rock">Rock and Roll</a></li>
+              <li><a href="generos.html#rnb">R&amp;B</a></li>
+            </ul>
+          </li>
+          <li><a href="#interactivo">Interactivo</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="generos.html">Subpágina</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" aria-labelledby="titulo-principal">
+      <div class="hero-content">
+        <p class="eyebrow">Sitio educativo de programación web</p>
+        <h1 id="titulo-principal">MusicRoot</h1>
+        <p>Explora géneros musicales mediante una página principal y una subpágina. El sitio incluye menú dinámico, slider, mensajes personalizados, modo oscuro, modal informativo y validación de formulario con JavaScript.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="generos.html">Ver subpágina de géneros</a>
+          <a class="btn secondary" href="#interactivo">Probar JavaScript</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro-section" aria-labelledby="titulo-sitio">
+      <div class="section-wrapper two-columns">
+        <article class="card">
+          <h2 id="titulo-sitio">Propósito del sitio</h2>
+          <p>MusicRoot presenta información básica sobre algunos géneros musicales y demuestra el uso de elementos dinámicos implementados con un archivo JavaScript externo.</p>
+          <p>La página principal resume el proyecto y la subpágina contiene el detalle de los géneros, cumpliendo con la estructura solicitada de página principal y subpágina.</p>
+        </article>
+        <article class="card accent-card">
+          <h2>Funciones implementadas</h2>
+          <ul class="check-list">
+            <li>Menú desplegable funcional con clic, teclado y eventos de mouse.</li>
+            <li>Slider automático con controles manuales.</li>
+            <li>Mensaje de bienvenida por hora e idioma.</li>
+            <li>Modal con información dinámica.</li>
+            <li>Formulario validado con mensajes accesibles.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="interactivo" class="interactive-section" aria-labelledby="titulo-interactivo">
+      <div class="section-wrapper">
+        <div class="section-heading">
+          <p class="eyebrow">JavaScript aplicado</p>
+          <h2 id="titulo-interactivo">Elementos dinámicos</h2>
+          <p id="welcome-message" class="welcome-message" aria-live="polite">Bienvenida a MusicRoot.</p>
+        </div>
+
+        <div class="controls-row" aria-label="Controles interactivos">
+          <button type="button" class="lang-btn" data-lang="es">Mensaje en español</button>
+          <button type="button" class="lang-btn" data-lang="en">Message in English</button>
+          <button type="button" id="theme-toggle" class="theme-btn" aria-pressed="false">Cambiar modo</button>
+        </div>
+
+        <article class="slider-card" aria-labelledby="titulo-slider">
+          <div class="slider-copy">
+            <h3 id="titulo-slider">Slider automático y manual</h3>
+            <p>El carrusel cambia automáticamente con <code>setInterval</code> y también permite avanzar o retroceder con botones.</p>
+          </div>
+          <div class="slider" aria-roledescription="carrusel" aria-label="Slider de géneros musicales">
+            <button class="slider-control prev" type="button" aria-label="Ver imagen anterior">‹</button>
+            <figure>
+              <img id="slider-image" src="imagenes/jazz1.jfif" alt="Músico interpretando jazz en un escenario">
+              <figcaption id="slider-caption" aria-live="polite">Jazz: improvisación y expresión musical.</figcaption>
+            </figure>
+            <button class="slider-control next" type="button" aria-label="Ver imagen siguiente">›</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="preview-section" aria-labelledby="titulo-preview">
+      <div class="section-wrapper">
+        <div class="section-heading">
+          <p class="eyebrow">Vista rápida</p>
+          <h2 id="titulo-preview">Géneros destacados</h2>
+          <p>La información completa se encuentra en la subpágina de géneros.</p>
+        </div>
+        <div class="preview-grid">
+          <article class="genre-preview">
+            <img src="imagenes/jazzmusico.jfif" alt="Músico de jazz tocando un instrumento">
+            <h3>Jazz</h3>
+            <p>Improvisación, ritmo y expresión.</p>
+            <a href="generos.html#jazz">Ver detalle</a>
+          </article>
+          <article class="genre-preview">
+            <img src="imagenes/popescenario.jfif" alt="Escenario iluminado de música pop">
+            <h3>Pop</h3>
+            <p>Melodías populares y cercanas.</p>
+            <a href="generos.html#pop">Ver detalle</a>
+          </article>
+          <article class="genre-preview">
+            <img src="imagenes/Rock1.jfif" alt="Imagen de una presentación de rock and roll">
+            <h3>Rock and Roll</h3>
+            <p>Energía, guitarras y cambio cultural.</p>
+            <a href="generos.html#rock">Ver detalle</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contact-section" aria-labelledby="titulo-contacto">
+      <div class="section-wrapper contact-layout">
+        <div>
+          <p class="eyebrow">Formulario</p>
+          <h2 id="titulo-contacto">Opinión sobre el sitio</h2>
+          <p>Este formulario usa validación con JavaScript. Si falta un campo o el correo no tiene formato correcto, se muestra un mensaje de error.</p>
+        </div>
+        <form id="contact-form" class="contact-form" novalidate>
+          <label for="name">Nombre</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+
+          <label for="email">Correo electrónico</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+
+          <label for="favorite">Género favorito</label>
+          <select id="favorite" name="favorite" required>
+            <option value="">Seleccione una opción</option>
+            <option value="Jazz">Jazz</option>
+            <option value="Pop">Pop</option>
+            <option value="Blues">Blues</option>
+            <option value="Hip Hop">Hip Hop</option>
+            <option value="Rock and Roll">Rock and Roll</option>
+            <option value="R&B">R&amp;B</option>
+          </select>
+
+          <button type="submit" class="btn primary">Enviar opinión</button>
+          <p id="form-message" class="form-message" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div id="info-modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <button class="modal-close" type="button" aria-label="Cerrar ventana informativa">×</button>
+      <h2 id="modal-title">Información</h2>
+      <p id="modal-text"></p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>MusicRoot - Proyecto académico de Programación Web.</p>
+  </footer>
+</body>
+</html>
